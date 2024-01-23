@@ -17,7 +17,8 @@
     
     <h1>Employees</h1>
 
-    <form action={{ route('employee.index') }} method="get">
+    <form action={{ route('employee.index') }} method="post">
+        @csrf
         <span>Name:</span><br>
         <input name="name" type="text"><br>
         <span>E-mail:</span><br>

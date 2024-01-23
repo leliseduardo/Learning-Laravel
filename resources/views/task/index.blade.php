@@ -18,6 +18,7 @@
     <h1>Tasks</h1>
 
     <form action={{ route('task.index') }} method="get">
+        @csrf
         <span>Task name:</span><br>
         <input name="name" type="text"><br>
         <span>Start date:</span><br>

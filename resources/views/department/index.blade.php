@@ -18,6 +18,7 @@
     <h1>Departaments</h1>
 
     <form action={{ route('department.index') }} method="get">
+        @csrf
         <span>Department name:</span><br>
         <input name="name" type="text"><br><br>
         <input name="button-submit" type="submit" value="Register">
