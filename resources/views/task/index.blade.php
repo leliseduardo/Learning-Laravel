@@ -27,6 +27,11 @@
         <input name="end-date" type="date"><br>
         <span>Description:</span><br>
         <textarea name="description" id="description" cols="50" rows="5"></textarea><br><br>
+        <select name="employee" id="employee-tasks">
+            <option value="" disabled selected>Employee</option>
+            <option value="1">Employee 1</option>
+            <option value="2">Employee 2</option>
+        </select><br><br>
         <input type="submit" value="Register">
     </form>
     <hr>
