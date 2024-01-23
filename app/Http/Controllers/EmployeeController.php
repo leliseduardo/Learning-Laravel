@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Department;
+use App\Models\Employee;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    public function index(){
+    public function index(Request $request)
+    {
+        $department = new Department();
 
-        // var_dump($_POST);
-        return view('employee.index');
+        return view('employee.index')->with('departments', $department->all());
     }
 }

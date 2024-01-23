@@ -25,10 +25,11 @@
         <input name="email" type="text"><br>
         <span>Phone:</span><br>
         <input name="phone" type="text"><br><br>
-        <select name="departments" id="employee-department">
+        <select name="employees_department_id_foreign" id="employee-department">
             <option value="" disabled selected>Departments</option>
-            <option value="1">Eletrônica</option>
-            <option value="2">Computação</option>
+            @foreach($departments as $d)
+                <option value={{$d->id}}>{{$d->name}}</option>
+            @endforeach
         </select><br><br>
         <input name="button-submit" type="submit" value="Register">
         <hr>    
