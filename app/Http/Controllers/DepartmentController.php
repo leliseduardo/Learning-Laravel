@@ -9,8 +9,15 @@ class DepartmentController extends Controller
 {
     public function index(Request $request){
 
+        return view('department.index');
+    }
+
+    public function post(Request $request){
+        
         $department = new Department();
 
-        return view('department.index');
+        $department->create($request->all());
+
+        return redirect()->route('department.index');
     }
 }
