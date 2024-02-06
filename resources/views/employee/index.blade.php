@@ -17,7 +17,7 @@
     
     <h1>Employees</h1>
 
-    <form action={{ route('employee.index') }} method="get">
+    <form action={{ route('employee.post') }} method="post">
         @csrf
         <span>Name:</span><br>
         <input name="name" type="text"><br>
@@ -25,7 +25,7 @@
         <input name="email" type="text"><br>
         <span>Phone:</span><br>
         <input name="phone" type="text"><br><br>
-        <select name="employees_department_id_foreign" id="employee-department">
+        <select name="department_id" id="employee-department">
             <option value="" disabled selected>Departments</option>
             @foreach($departments as $d)
                 <option value={{$d->id}}>{{$d->name}}</option>

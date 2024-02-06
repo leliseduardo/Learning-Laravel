@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class DepartmentController extends Controller
 {
-    public function index(Request $request){
+    public function index(){
 
         return view('department.index');
     }

@@ -19,7 +19,7 @@ Route::prefix('/')->group(function(){
     Route::get('task', [App\Http\Controllers\TaskController::class, 'index'])->name('task.index');
     Route::get('department', [App\Http\Controllers\DepartmentController::class, 'index'])->name('department.index');
     
-    Route::post('employee', [App\Http\Controllers\EmployeeController::class, 'index'])->name('employee.index');
-    Route::post('task', [App\Http\Controllers\TaskController::class, 'index'])->name('task.index');
+    Route::post('employee', [App\Http\Controllers\EmployeeController::class, 'post'])->name('employee.post');
+    Route::post('task', [App\Http\Controllers\TaskController::class, 'post'])->name('task.post');
     Route::post('department', [App\Http\Controllers\DepartmentController::class, 'post'])->name('department.post');
 });
